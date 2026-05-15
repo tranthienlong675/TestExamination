@@ -1,0 +1,14 @@
+C:\Users\ttmsa\source\repos\TestExamination\TestExamination\bin\Debug\net10.0\TestExamination.exe
+C:\Users\ttmsa\source\repos\TestExamination\TestExamination\bin\Debug\net10.0\TestExamination.deps.json
+C:\Users\ttmsa\source\repos\TestExamination\TestExamination\bin\Debug\net10.0\TestExamination.runtimeconfig.json
+C:\Users\ttmsa\source\repos\TestExamination\TestExamination\bin\Debug\net10.0\TestExamination.dll
+C:\Users\ttmsa\source\repos\TestExamination\TestExamination\bin\Debug\net10.0\TestExamination.pdb
+C:\Users\ttmsa\source\repos\TestExamination\TestExamination\obj\Debug\net10.0\TestExamination.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ttmsa\source\repos\TestExamination\TestExamination\obj\Debug\net10.0\TestExamination.AssemblyInfoInputs.cache
+C:\Users\ttmsa\source\repos\TestExamination\TestExamination\obj\Debug\net10.0\TestExamination.AssemblyInfo.cs
+C:\Users\ttmsa\source\repos\TestExamination\TestExamination\obj\Debug\net10.0\TestExamination.csproj.CoreCompileInputs.cache
+C:\Users\ttmsa\source\repos\TestExamination\TestExamination\obj\Debug\net10.0\TestExamination.dll
+C:\Users\ttmsa\source\repos\TestExamination\TestExamination\obj\Debug\net10.0\refint\TestExamination.dll
+C:\Users\ttmsa\source\repos\TestExamination\TestExamination\obj\Debug\net10.0\TestExamination.pdb
+C:\Users\ttmsa\source\repos\TestExamination\TestExamination\obj\Debug\net10.0\TestExamination.genruntimeconfig.cache
+C:\Users\ttmsa\source\repos\TestExamination\TestExamination\obj\Debug\net10.0\ref\TestExamination.dll
