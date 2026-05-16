@@ -7,15 +7,29 @@ namespace TestExamination
 {
     public abstract class Test
     {
-        public string Content {  get; set; }
+        public string Question {  get; set; }
 
-        public Test(string content)
+        public Test(string question)
         {
-            Content = content;
+            Question = question;
         }
 
         public abstract void Display();
 
-        public abstract bool CheckAnswer(string answer);
+        public void GetUserAnswer()
+        {
+            Console.Write("Your answer: ");
+            string? answer = Console.ReadLine();
+            if (answer != null)
+            {
+                CheckAnswer(answer);
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please try again.");
+                GetUserAnswer();
+            }
+        }
+        protected abstract bool CheckAnswer(string answer);
     }
 }

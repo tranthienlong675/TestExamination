@@ -7,19 +7,30 @@ namespace TestExamination
 {
     public class MultipleChoiceTest : Test
     {
-        public MultipleChoiceTest(string content) : base(content)
+        private List<string> Options;
+        private HashSet<char> CorrectAnswers;
+        public MultipleChoiceTest(string question, List<string> options, HashSet<char> correctAnswers) : base(question)
         {
-
+            Options = options;
+            CorrectAnswers = correctAnswers;
         }
 
         public override void Display()
         {
-
+            for (int i = 0; i < Options.Count; i++)
+            {
+                Console.WriteLine($"{(char)('A' + i)}. {Options[i]}");
+            }
         }
 
-        public override bool CheckAnswer(string answer)
+        protected override bool CheckAnswer(string answer)
         {
-            return false;
+            HashSet<char> userAnswers = answer
+                .ToUpper()
+                .Split(',')
+                .Select(x => x.Trim()[0])
+                .ToHashSet();
+            return userAnswers.SetEquals(CorrectAnswers);
         }
     }
 }

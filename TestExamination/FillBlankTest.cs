@@ -7,19 +7,20 @@ namespace TestExamination
 {
     public class FillBlankTest : Test
     {
-        public  FillBlankTest(string content) : base(content)
+        private string CorrectAnswer;
+        public  FillBlankTest(string question, string correctAnswer) : base(question)
         {
-
+            CorrectAnswer = correctAnswer;
         }
 
         public override void Display()
         {
-
+            Console.WriteLine(Question);
         }
 
-        public override bool CheckAnswer(string answer)
+        protected override bool CheckAnswer(string answer)
         {
-            return false;
+            return answer == CorrectAnswer;
         }
     }
 }
