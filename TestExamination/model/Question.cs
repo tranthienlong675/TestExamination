@@ -8,6 +8,8 @@ namespace TestExamination.model
     public abstract class Question
     {
         public string Content { get; set; }
+        public abstract string Description { get; }
+        public bool isCorrect { get; set; }
 
         public Question(string content)
         {
@@ -19,13 +21,21 @@ namespace TestExamination.model
         {
             Console.Write("Your answer: ");
             string? answer = Console.ReadLine();
-            if (answer != null)
+            if (!string.IsNullOrEmpty(answer))
             {
-                CheckAnswer(answer);
+                try
+                {
+                    isCorrect = CheckAnswer(answer);
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Invalid input. Please try again.");
+                    GetUserAnswer();
+                }
             }
             else
             {
-                Console.WriteLine("Invalid input. Please try again.");
+                Console.WriteLine("Blank input. Please try again.");
                 GetUserAnswer();
             }
         }
