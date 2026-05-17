@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TestExamination
+namespace TestExamination.model
 {
     public abstract class Question
     {
-        public string Content {  get; set; }
+        public string Content { get; set; }
 
-        public Question(string question)
+        public Question(string content)
         {
-            Content = question;
+            Content = content;
         }
-
         public abstract void Display();
 
         public void GetUserAnswer()
@@ -30,6 +29,13 @@ namespace TestExamination
                 GetUserAnswer();
             }
         }
-        protected abstract bool CheckAnswer(string answer);
+
+        public int ParseAnswer(string answer)
+        {
+            char c = answer.Trim().ToUpper()[0];
+
+            return c - 'A';
+        }
+        public abstract bool CheckAnswer(string answer);
     }
 }
