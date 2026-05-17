@@ -12,3 +12,5 @@ C:\Users\ttmsa\source\repos\TestExamination\TestExamination\obj\Debug\net10.0\re
 C:\Users\ttmsa\source\repos\TestExamination\TestExamination\obj\Debug\net10.0\TestExamination.pdb
 C:\Users\ttmsa\source\repos\TestExamination\TestExamination\obj\Debug\net10.0\TestExamination.genruntimeconfig.cache
 C:\Users\ttmsa\source\repos\TestExamination\TestExamination\obj\Debug\net10.0\ref\TestExamination.dll
+C:\Users\ttmsa\source\repos\TestExamination\TestExamination\obj\Debug\net10.0\TestExamination.sourcelink.json
+C:\Users\ttmsa\source\repos\TestExamination\TestExamination\bin\Debug\net10.0\tests\test.json

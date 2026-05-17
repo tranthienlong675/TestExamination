@@ -22,6 +22,26 @@
       ]
     },
     {
+      "type": "single",
+
+      "content": "2 + 2 = ?",
+
+      "options": [
+        {
+          "content": "3",
+          "isCorrect": false
+        },
+        {
+          "content": "4",
+          "isCorrect": true
+        },
+        {
+          "content": "5",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
       "type": "multiple",
       "content": "Which of the following are prime numbers?",
       "options": [
