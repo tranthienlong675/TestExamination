@@ -5,11 +5,11 @@ using System.Text;
 
 namespace TestExamination
 {
-    public class SingleChoiceTest : Test
+    public class SingleChoiceTest : Question
     {
         private List<string> Options;
-        private string CorrectAnswer;
-        public SingleChoiceTest(string question, List<string> options, string correctAnswer) : base(question)
+        private char CorrectAnswer;
+        public SingleChoiceTest(string content, List<string> options, char correctAnswer) : base(content)
         {
             Options = options;
             CorrectAnswer = correctAnswer;
@@ -25,7 +25,7 @@ namespace TestExamination
 
         protected override bool CheckAnswer(string answer)
         {
-            return answer.ToUpper() == CorrectAnswer;
+            return answer.Trim().ToUpper()[0] == CorrectAnswer;
         }
     }
 }

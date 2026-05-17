@@ -1,0 +1,32 @@
+﻿{
+  "title": "Test Examination",
+  "questions": [
+    {
+      "type": "single",
+      "content": "What is the capital of France?",
+      "options": [
+        "Berlin",
+        "Madrid",
+        "Paris",
+        "Rome"
+      ],
+      "answer": "C"
+    },
+    {
+      "type": "multiple",
+      "content": "Which of the following are programming languages?",
+      "options": [
+        "Python",
+        "Java",
+        "HTML",
+        "CSS"
+      ],
+      "answer": [ "A", "B" ]
+    },
+    {
+      "type": "fill",
+      "content": "The chemical symbol for water is ____.",
+      "answer": "H2O"
+    }
+  ]
+}

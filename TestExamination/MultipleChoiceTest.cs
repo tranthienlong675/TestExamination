@@ -5,11 +5,11 @@ using System.Text;
 
 namespace TestExamination
 {
-    public class MultipleChoiceTest : Test
+    public class MultipleChoiceTest : Question
     {
         private List<string> Options;
         private HashSet<char> CorrectAnswers;
-        public MultipleChoiceTest(string question, List<string> options, HashSet<char> correctAnswers) : base(question)
+        public MultipleChoiceTest(string content, List<string> options, HashSet<char> correctAnswers) : base(content)
         {
             Options = options;
             CorrectAnswers = correctAnswers;

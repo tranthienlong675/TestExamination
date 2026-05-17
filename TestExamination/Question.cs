@@ -5,13 +5,13 @@ using System.Text;
 
 namespace TestExamination
 {
-    public abstract class Test
+    public abstract class Question
     {
-        public string Question {  get; set; }
+        public string Content {  get; set; }
 
-        public Test(string question)
+        public Question(string question)
         {
-            Question = question;
+            Content = question;
         }
 
         public abstract void Display();
