@@ -13,9 +13,9 @@ namespace TestExamination
             switch (dto.Type)
             {
                 case "single":
-                    return new SingleChoiceQuestion(dto.Content, dto.Options, dto.CorrectIndex);
+                    return new SingleChoiceQuestion(dto.Content, dto.Options);
                 case "multiple":
-                    return new MultipleChoiceQuestion(dto.Content, dto.Options, dto.CorrectIndexs);
+                    return new MultipleChoiceQuestion(dto.Content, dto.Options);
                 case "fill":
                     return new FillBlankQuestion(dto.Content, dto.CorrectAnswer);
                 default:

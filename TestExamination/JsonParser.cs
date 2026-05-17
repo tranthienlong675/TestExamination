@@ -19,9 +19,20 @@ namespace TestExamination
 
             test.Title = testDto.Title;
 
-            test.Questions = testDto.Questions
+            try
+            {
+                test.Questions = testDto.Questions
                 .Select(q => QuestionFactory.Create(q))
                 .ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Test is not valid: " + ex.Message);
+                Console.WriteLine("If you are student. Please inform your teacher.");
+
+                return null;
+            }
+
             return test;
         }
     }
