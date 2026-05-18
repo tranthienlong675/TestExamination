@@ -18,6 +18,9 @@ namespace TestExamination
             Test test = new Test();
 
             test.Title = testDto.Title;
+            test.TimeLimitMinutes = testDto.TimeLimitMinutes > 0 ? testDto.TimeLimitMinutes : 15;
+            test.ShuffleQuestions = testDto.ShuffleQuestions;
+            test.ShuffleOptions = testDto.ShuffleOptions;
 
             try
             {

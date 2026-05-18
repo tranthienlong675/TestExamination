@@ -1,5 +1,8 @@
 ﻿{
   "title": "Test Examination",
+  "timeLimitMinutes": 15,
+  "shuffleQuestions": true,
+  "shuffleOptions": true,
   "questions": [
     {
       "type": "single",

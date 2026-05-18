@@ -483,8 +483,11 @@ namespace TestExamination
         [STAThread]
         public static void Main(string[] args)
         {
-            ExamManager.GenerateMockData(); 
-            Validate(); 
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            ExamManager.GenerateMockData();
+            Application.Run(new TestExamination.UI.Forms.MainForm());
             return;
         }
     }

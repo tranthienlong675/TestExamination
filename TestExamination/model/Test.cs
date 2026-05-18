@@ -8,6 +8,12 @@ namespace TestExamination.model
     {
         public string Title { get; set; }
 
+        public int TimeLimitMinutes { get; set; } = 15;
+
+        public bool ShuffleQuestions { get; set; } = true;
+
+        public bool ShuffleOptions { get; set; } = true;
+
         public List<Question> Questions { get; set; }
     }
 }
