@@ -1,51 +1,53 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace TestExamination.model
 {
     public abstract class Question
     {
-        public string Content { get; set; }
+        // CHỈ ĐỂ DUY NHẤT 1 DÒNG NÀY, XÓA DÒNG CONTENT CÒN LẠI NẾU CÓ
+        public string Content { get; set; } = string.Empty;
+
         public abstract string Description { get; }
-        public bool isCorrect { get; set; }
+        public bool IsCorrect { get; set; } 
 
         public Question(string content)
         {
-            Content = content;
+            Content = content; // Hết lỗi đỏ gạch chân!
         }
+
         public abstract void Display();
+        public abstract bool CheckAnswer(string answer);
 
         public void GetUserAnswer()
         {
-            Console.Write("Your answer: ");
-            string? answer = Console.ReadLine();
-            if (!string.IsNullOrEmpty(answer))
+            while (true)
             {
+                Console.Write("Your answer: ");
+                string? answer = Console.ReadLine();
+
+                if (string.IsNullOrWhiteSpace(answer))
+                {
+                    Console.WriteLine("Blank input. Please try again.");
+                    continue;
+                }
+
                 try
                 {
-                    isCorrect = CheckAnswer(answer);
+                    IsCorrect = CheckAnswer(answer);
+                    break; 
                 }
                 catch (Exception)
                 {
                     Console.WriteLine("Invalid input. Please try again.");
-                    GetUserAnswer();
                 }
             }
-            else
-            {
-                Console.WriteLine("Blank input. Please try again.");
-                GetUserAnswer();
-            }
         }
 
-        public int ParseAnswer(string answer)
+        protected int ParseAnswer(string answer)
         {
+            if (string.IsNullOrWhiteSpace(answer)) return -1;
             char c = answer.Trim().ToUpper()[0];
-
             return c - 'A';
         }
-        public abstract bool CheckAnswer(string answer);
     }
 }

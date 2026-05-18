@@ -8,9 +8,9 @@ namespace TestExamination.DTO
     class TestDTO
     {
         [JsonPropertyName("title")]
-        public string Title { get; set; }
+        public required string Title { get; set; }
 
         [JsonPropertyName("questions")]
-        public List<QuestionDTO> Questions { get; set; }
+        public required List<QuestionDTO> Questions { get; set; }
     }
 }
