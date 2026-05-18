@@ -1,4 +1,6 @@
-﻿using TestExamination.model;
+﻿using System;
+using System.Windows.Forms;
+using TestExamination.model;
 
 namespace TestExamination
 {
@@ -58,9 +60,14 @@ namespace TestExamination
 
             Console.WriteLine($"\nYour score is: {max}");
         }
+        [STAThread]
         public static void Main(string[] args)
         {
-            Validate();
-        } 
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            Application.Run(new UI.Forms.MainForm());
+        }
     }
 }

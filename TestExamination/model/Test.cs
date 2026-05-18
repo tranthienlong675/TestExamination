@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TestExamination.model
 {
-    class Test
+    public class Test
     {
         public string Title { get; set; }
 
