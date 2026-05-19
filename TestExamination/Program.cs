@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.Json;
 using System.Windows.Forms;
 using MiniExcelLibs; 
 using TestExamination.model; 
@@ -121,14 +122,49 @@ namespace TestExamination
                     foreach (var line in lines)
                     {
                         if (string.IsNullOrWhiteSpace(line) || !line.Contains("|")) continue;
+                        
                         var parts = line.Split('|');
-                        if (parts.Length >= 2)
+                        if (parts.Length < 2) continue;
+
+                        string type = parts[0].Trim().ToLower();
+                        string content = parts[1].Trim();
+
+                        try
                         {
-                            currentTest.Questions.Add(new FillBlankQuestion(parts[0].Trim(), parts[1].Trim()));
-                            count++;
+                            if (type == "fill" && parts.Length >= 3)
+                            {
+                                string answer = parts[2].Trim();
+                                currentTest.Questions.Add(new FillBlankQuestion(content, answer));
+                                count++;
+                            }
+                            else if (type == "single" && parts.Length >= 4)
+                            {
+                                var options = ParseOptions(parts, 2);
+                                if (options.Count >= 2 && options.Count(o => o.IsCorrect) == 1)
+                                {
+                                    currentTest.Questions.Add(new SingleChoiceQuestion(content, options));
+                                    count++;
+                                }
+                            }
+                            else if (type == "multiple" && parts.Length >= 4)
+                            {
+                                var options = ParseOptions(parts, 2);
+                                if (options.Count >= 2)
+                                {
+                                    currentTest.Questions.Add(new MultipleChoiceQuestion(content, options));
+                                    count++;
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"[WARNING] Dòng không hợp lệ: {line} - {ex.Message}");
                         }
                     }
-                    Console.WriteLine($"[SUCCESS] Đã import thành công {count} câu hỏi tự luận (FillBlank) từ file TXT.");
+                    Console.WriteLine($"[SUCCESS] Đã import thành công {count} câu hỏi từ file TXT.");
+                    
+                    // Lưu vào file JSON
+                    JsonParser.SaveTestToJson(currentTest, "tests/test.json");
                 }
                 else if (extension == ".xlsx")
                 {
@@ -143,13 +179,43 @@ namespace TestExamination
                         string content = rowData.Values.ElementAtOrDefault(1)?.ToString() ?? "";
                         string answer = rowData.Values.ElementAtOrDefault(2)?.ToString() ?? "";
 
-                        if (type.ToLower() == "blank" && !string.IsNullOrEmpty(content))
+                        try
                         {
-                            currentTest.Questions.Add(new FillBlankQuestion(content, answer));
-                            count++;
+                            if (type.ToLower() == "fill" && !string.IsNullOrEmpty(content))
+                            {
+                                currentTest.Questions.Add(new FillBlankQuestion(content, answer));
+                                count++;
+                            }
+                            else if (type.ToLower() == "single" && !string.IsNullOrEmpty(content))
+                            {
+                                var optionsJson = rowData.Values.ElementAtOrDefault(3)?.ToString() ?? "[]";
+                                var options = JsonSerializer.Deserialize<List<Option>>(optionsJson) ?? new List<Option>();
+                                if (options.Count >= 2 && options.Count(o => o.IsCorrect) == 1)
+                                {
+                                    currentTest.Questions.Add(new SingleChoiceQuestion(content, options));
+                                    count++;
+                                }
+                            }
+                            else if (type.ToLower() == "multiple" && !string.IsNullOrEmpty(content))
+                            {
+                                var optionsJson = rowData.Values.ElementAtOrDefault(3)?.ToString() ?? "[]";
+                                var options = JsonSerializer.Deserialize<List<Option>>(optionsJson) ?? new List<Option>();
+                                if (options.Count >= 2)
+                                {
+                                    currentTest.Questions.Add(new MultipleChoiceQuestion(content, options));
+                                    count++;
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"[WARNING] Dòng không hợp lệ: {ex.Message}");
                         }
                     }
                     Console.WriteLine($"[SUCCESS] Đã import thành công {count} câu hỏi từ file Excel.");
+                    
+                    // Lưu vào file JSON
+                    JsonParser.SaveTestToJson(currentTest, "tests/test.json");
                 }
                 else
                 {
@@ -160,6 +226,25 @@ namespace TestExamination
             {
                 Console.WriteLine($"[ERROR] Có lỗi xảy ra khi import: {ex.Message}");
             }
+        }
+
+        private static List<Option> ParseOptions(string[] parts, int startIndex)
+        {
+            var options = new List<Option>();
+            for (int i = startIndex; i < parts.Length; i++)
+            {
+                string optionPart = parts[i].Trim();
+                var optionData = optionPart.Split(',');
+                
+                if (optionData.Length >= 2)
+                {
+                    string optionContent = optionData[0].Trim();
+                    bool isCorrect = bool.TryParse(optionData[1].Trim(), out var result) && result;
+                    
+                    options.Add(new Option(optionContent, isCorrect));
+                }
+            }
+            return options;
         }
 
         public static void GenerateMockData()

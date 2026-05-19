@@ -1,4 +1,4 @@
-﻿{
+{
   "title": "Test Examination",
   "timeLimitMinutes": 15,
   "shuffleQuestions": true,
@@ -6,9 +6,7 @@
   "questions": [
     {
       "type": "single",
-
-      "content": "2 + 2 = ?",
-
+      "content": "2 \u002B 2 = ?",
       "options": [
         {
           "content": "3",
@@ -26,9 +24,7 @@
     },
     {
       "type": "single",
-
-      "content": "2 + 2 = ?",
-
+      "content": "2 \u002B 2 = ?",
       "options": [
         {
           "content": "3",
@@ -70,6 +66,172 @@
       "type": "fill",
       "content": "The capital of France is ____.",
       "correctAnswer": "Paris"
+    },
+    {
+      "type": "fill",
+      "content": "L\u1EADp tr\u00ECnh OOP vi\u1EBFt t\u1EAFt c\u1EE7a t\u1EEB g\u00EC?",
+      "correctAnswer": "Object Oriented Programming"
+    },
+    {
+      "type": "fill",
+      "content": "T\u1EEB kh\u00F3a d\u00F9ng \u0111\u1EC3 k\u1EBF th\u1EEBa l\u1EDBp cha trong C# l\u00E0 g\u00EC?",
+      "correctAnswer": "base"
+    },
+    {
+      "type": "single",
+      "content": "2 \u002B 2 b\u1EB1ng bao nhi\u00EAu?",
+      "options": [
+        {
+          "content": "3",
+          "isCorrect": false
+        },
+        {
+          "content": "4",
+          "isCorrect": true
+        },
+        {
+          "content": "5",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "type": "single",
+      "content": "Th\u1EE7 \u0111\u00F4 c\u1EE7a Vi\u1EC7t Nam l\u00E0?",
+      "options": [
+        {
+          "content": "TP HCM",
+          "isCorrect": false
+        },
+        {
+          "content": "H\u00E0 N\u1ED9i",
+          "isCorrect": true
+        },
+        {
+          "content": "\u0110\u00E0 N\u1EB5ng",
+          "isCorrect": false
+        },
+        {
+          "content": "C\u1EA7n Th\u01A1",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "content": "Ch\u1ECDn t\u1EA5t c\u1EA3 nh\u1EEFng s\u1ED1 nguy\u00EAn t\u1ED1",
+      "options": [
+        {
+          "content": "2",
+          "isCorrect": true
+        },
+        {
+          "content": "3",
+          "isCorrect": true
+        },
+        {
+          "content": "4",
+          "isCorrect": false
+        },
+        {
+          "content": "5",
+          "isCorrect": true
+        },
+        {
+          "content": "6",
+          "isCorrect": false
+        },
+        {
+          "content": "7",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "content": "L\u1EADp tr\u00ECnh OOP vi\u1EBFt t\u1EAFt c\u1EE7a t\u1EEB g\u00EC?",
+      "correctAnswer": "Object Oriented Programming"
+    },
+    {
+      "type": "fill",
+      "content": "T\u1EEB kh\u00F3a \u0111\u1EC3 k\u1EBF th\u1EEBa l\u1EDBp cha trong C# l\u00E0",
+      "correctAnswer": "base"
+    },
+    {
+      "type": "single",
+      "content": "\u0110\u00E2u l\u00E0 ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh?",
+      "options": [
+        {
+          "content": "Python",
+          "isCorrect": true
+        },
+        {
+          "content": "HTML",
+          "isCorrect": false
+        },
+        {
+          "content": "SQL",
+          "isCorrect": false
+        },
+        {
+          "content": "CSS",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "type": "multiple",
+      "content": "Ch\u1ECDn c\u00E1c t\u1EEB kh\u00F3a C# ch\u00EDnh x\u00E1c",
+      "options": [
+        {
+          "content": "public",
+          "isCorrect": true
+        },
+        {
+          "content": "private",
+          "isCorrect": true
+        },
+        {
+          "content": "protected",
+          "isCorrect": true
+        },
+        {
+          "content": "def",
+          "isCorrect": false
+        },
+        {
+          "content": "class",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "content": "Paris l\u00E0 th\u1EE7 \u0111\u00F4 c\u1EE7a n\u01B0\u1EDBc n\u00E0o?",
+      "correctAnswer": "France"
+    },
+    {
+      "type": "single",
+      "content": "1 \u002B 1 b\u1EB1ng m\u1EA5y?",
+      "options": [
+        {
+          "content": "1",
+          "isCorrect": false
+        },
+        {
+          "content": "2",
+          "isCorrect": true
+        },
+        {
+          "content": "3",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "content": "T\u1ED5ng c\u1EE7a 5 \u002B 3 l\u00E0",
+      "correctAnswer": "8"
     }
   ]
 }

@@ -11,6 +11,9 @@ namespace TestExamination.model
         public string Content { get; set; }
         [JsonPropertyName("isCorrect")]
         public bool IsCorrect { get; set; }
+        
+        public Option() { }
+        
         public Option(string content, bool isCorrect)
         {
             Content = content;
