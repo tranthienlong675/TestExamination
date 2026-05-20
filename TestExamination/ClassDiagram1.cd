@@ -1,31 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="TestExamination.Test">
+  <Class Name="TestExamination.model.Question">
     <Position X="2.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAgAAAAAAAAACAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Test.cs</FileName>
+      <HashCode>AAAAAAAAAgAgAAAAAAACAQAAAAAIIAAAAAIAAAAAAAA=</HashCode>
+      <FileName>model\Question.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TestExamination.SingleChoiceTest">
+  <Class Name="TestExamination.model.SingleChoiceQuestion">
     <Position X="7" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAACAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>SingleChoiceTest.cs</FileName>
+      <HashCode>AAAAAAAAAAAgAAAAAAACAQAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>model\SingleChoiceQuestion.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TestExamination.MultipleChoiceTest">
-    <Position X="7" Y="3.25" Width="1.5" />
+  <Class Name="TestExamination.model.FillBlankQuestion">
+    <Position X="2.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAACAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MultipleChoiceTest.cs</FileName>
+      <HashCode>AAAAAAAAAAAgAAAAAAACAQAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>model\FillBlankQuestion.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TestExamination.FillBlankTest">
-    <Position X="2.25" Y="3.25" Width="1.5" />
+  <Class Name="TestExamination.model.MultipleChoiceQuestion">
+    <Position X="7" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAACAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>FillBlankTest.cs</FileName>
+      <HashCode>AAAAAAAAAAAgAAAAAAACAQAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>model\MultipleChoiceQuestion.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

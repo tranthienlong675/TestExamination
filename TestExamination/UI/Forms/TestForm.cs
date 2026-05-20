@@ -228,6 +228,7 @@ namespace TestExamination.UI.Forms
             root.Controls.Add(bottom);
 
             btnPrevious = CreateButton("Previous", Color.FromArgb(45, 45, 64), Color.White);
+            btnPrevious.ForeColor = Color.White;
             btnPrevious.Location = new Point(0, 18);
             btnPrevious.Size = new Size(130, 42);
             btnPrevious.Click += (_, _) => MovePrevious();
@@ -579,9 +580,15 @@ namespace TestExamination.UI.Forms
                 ForeColor = foreColor,
                 FlatStyle = FlatStyle.Flat,
                 Font = new Font("Segoe UI", 10F, FontStyle.Bold),
-                Cursor = Cursors.Hand
+                Cursor = Cursors.Hand,
+                UseVisualStyleBackColor = false
             };
+
             button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseDownBackColor = backColor;
+            button.FlatAppearance.MouseOverBackColor = backColor;
+            button.FlatAppearance.CheckedBackColor = backColor;
+
             return button;
         }
     }
