@@ -28,5 +28,12 @@
       <FileName>model\MultipleChoiceQuestion.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Struct Name="TestExamination.Struct1">
+    <Position X="10" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Struct1.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
