@@ -28,12 +28,40 @@
       <FileName>model\MultipleChoiceQuestion.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Struct Name="TestExamination.Struct1">
-    <Position X="10" Y="4.5" Width="1.5" />
+  <Class Name="TestExamination.model.Option" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Struct1.cs</FileName>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>model\Option.cs</FileName>
     </TypeIdentifier>
-  </Struct>
+  </Class>
+  <Class Name="TestExamination.model.StudentAnswer" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACBAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\StudentSubmission.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestExamination.model.User" Collapsed="true">
+    <Position X="9.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAIAAEQAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>model\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestExamination.model.Test" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEABAAAAAAAAAAAAAEAEAAAAAAAAAAg=</HashCode>
+      <FileName>model\Test.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="TestExamination.model.UserRole" Collapsed="true">
+    <Position X="9.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\User.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
